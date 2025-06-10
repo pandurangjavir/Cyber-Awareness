@@ -1,0 +1,105 @@
+.tutorials-section {
+  padding: 4rem 0 5rem 0;
+  background: #f6f8fa;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.tutorials-heading {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #1a237e;
+  margin-bottom: 2.5rem;
+}
+
+.tutorials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
+  width: 100vw;
+  margin: 0;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.tutorial-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(60,72,88,0.10);
+  border: 1.5px solid #e3e8ee;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+}
+.tutorial-card:hover {
+  box-shadow: 0 8px 32px rgba(60,72,88,0.16);
+  border-color: #b6c2d2;
+  transform: translateY(-4px) scale(1.02);
+}
+.tutorial-video-wrap {
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin-bottom: 1.2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 2px 12px rgba(60,72,88,0.10);
+}
+.tutorial-video-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+.tutorial-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.tutorial-desc {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+.tutorial-links {
+  width: 100%;
+  margin-top: auto;
+  text-align: left;
+}
+.tutorial-links-label {
+  font-size: 0.98rem;
+  color: #304ffe;
+  font-weight: 600;
+}
+.tutorial-links ul {
+  list-style: disc inside;
+  margin: 0.3rem 0 0 0.5rem;
+  padding: 0;
+}
+.tutorial-links li {
+  margin-bottom: 0.2rem;
+}
+.tutorial-links a {
+  color: #1a237e;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.tutorial-links a:hover {
+  color: #3949ab;
+}
+@media (max-width: 700px) {
+  .tutorials-grid {
+    grid-template-columns: 1fr;
+    padding: 0 0.5rem;
+  }
+  .tutorial-card {
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+  }
+} 

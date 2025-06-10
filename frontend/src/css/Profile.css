@@ -1,0 +1,102 @@
+.profile-container {
+    min-height: 100vh;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+    width: 100vw;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+.MuiAppBar-root {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.MuiToolbar-root {
+    padding: 0 24px;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.profile-badges {
+    display: flex;
+    gap: 8px;
+    margin: 16px 0;
+    width: 100%;
+    justify-content: center;
+}
+
+.stat-value {
+    font-weight: 700;
+    margin: 16px 0;
+    background: linear-gradient(90deg, #304ffe 60%, #1a237e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 100%;
+}
+
+.menu-item {
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.menu-item:hover {
+    background: rgba(48, 79, 254, 0.1);
+    transform: translateX(8px);
+}
+
+.menu-item .MuiListItemIcon-root {
+    min-width: 40px;
+    color: #304ffe;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .profile-container {
+        padding: 20px 0;
+    }
+
+    .profile-header {
+        padding: 0 16px;
+    }
+
+    .stat-value {
+        font-size: 2rem;
+    }
+
+    .MuiToolbar-root {
+        padding: 0 16px;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(48, 79, 254, 0.5);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(48, 79, 254, 0.8);
+} 

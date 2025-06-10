@@ -1,0 +1,230 @@
+/* SecurityChallenges.css - Clean, modern, project-matching look */
+
+.challenges-section {
+  padding: 20px 0 10px 0;
+  background: linear-gradient(120deg, #e0eafc, #cfdef3);
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.challenges-header {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto 18px;
+  padding: 0 10px;
+}
+
+.challenges-header h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #1a237e;
+  letter-spacing: 1px;
+}
+
+.challenges-subtitle {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #2c3e50;
+}
+
+.challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px 40px 10px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.challenge-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: 1px solid #e0eafc;
+  position: relative;
+  min-width: 0;
+  min-height: 440px;
+  height: 100%;
+  justify-content: flex-start;
+}
+
+.challenge-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 0 16px 2px #b3c6e7;
+  border: 1.5px solid #b3c6e7;
+}
+
+.challenge-image {
+  height: 120px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px 16px 0 0;
+  flex-shrink: 0;
+}
+
+.challenge-content {
+  padding: 1.2rem 1.4rem 1.2rem 1.4rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.challenge-title {
+  font-size: 1.18rem;
+  color: #1a237e;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.challenge-description {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1.01rem;
+  line-height: 1.4;
+}
+
+.challenge-meta, .challenge-skills, .challenge-scenario, .start-challenge-btn {
+  display: none;
+}
+
+.difficulty-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 0.3rem 0.9rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #e0eafc;
+  color: #1a237e;
+  box-shadow: 0 0 4px #e0eafc;
+}
+
+.difficulty-badge.beginner {
+  background: var(--cyber-green);
+  color: #222;
+}
+.difficulty-badge.intermediate {
+  background: var(--cyber-yellow);
+  color: #222;
+}
+.difficulty-badge.advanced {
+  background: var(--cyber-red);
+  color: #fff;
+}
+.difficulty-badge.all-levels {
+  background: var(--neon-blue);
+  color: #fff;
+}
+
+.challenge-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 0.7rem;
+}
+
+.skill-tag {
+  background: var(--neon-blue);
+  color: #fff;
+  padding: 0.3rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 0 4px var(--neon-blue);
+}
+
+.challenge-scenario {
+  background: rgba(0,243,255,0.07);
+  border: 1px solid var(--neon-blue);
+  border-radius: 8px;
+  padding: 0.6rem;
+  margin-bottom: 0.7rem;
+}
+
+.challenge-scenario h4 {
+  color: var(--neon-blue);
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.challenge-scenario p {
+  color: var(--text-dark);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.start-challenge-btn {
+  margin-top: 18px;
+  width: 100%;
+  padding: 0.8rem;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 0 8px #e0eafc;
+  align-self: flex-end;
+}
+
+.start-challenge-btn:hover {
+  background: #1976d2;
+  transform: scale(1.04);
+}
+
+/* URL Scanner specific styles */
+.url-scanner-card {
+  border: 2px solid var(--primary-color);
+}
+
+.url-scanner-card .challenge-image {
+  background-image: url('/url-scanner.jpg');
+}
+
+.url-scanner-card .challenge-title {
+  color: var(--primary-color);
+}
+
+.url-scanner-card .start-challenge-btn {
+  background: var(--primary-color);
+}
+
+.url-scanner-card .start-challenge-btn:hover {
+  background: var(--primary-hover);
+}
+
+@media (max-width: 1100px) {
+  .challenges-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .challenges-grid {
+    grid-template-columns: 1fr;
+  }
+  .challenge-card {
+    min-height: 380px;
+  }
+  .challenge-image {
+    min-height: 80px;
+    height: 80px;
+  }
+} 

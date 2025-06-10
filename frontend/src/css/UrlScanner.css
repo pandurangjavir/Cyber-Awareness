@@ -1,0 +1,183 @@
+/* URLScanner.css - Clean, modern, project-matching look */
+
+.url-scanner-container {
+  max-width: 700px;
+  margin: 0 auto 32px auto;
+  padding: 24px 0 0 0;
+}
+
+.challenge-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.challenge-header h1 {
+  font-size: 2rem;
+  color: #1a237e;
+  margin-bottom: 0.5rem;
+}
+
+.challenge-description {
+  font-size: 1.05rem;
+  color: #2c3e50;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.url-scanner-content {
+  background: rgba(255,255,255,0.85);
+  border-radius: 14px;
+  padding: 24px 20px 20px 20px;
+  box-shadow: 0 4px 16px rgba(60,72,88,0.10);
+}
+
+.scanner-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+#url-input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #b3c6e7;
+  font-size: 1em;
+  background: #f7fafd;
+  color: #222;
+  transition: border-color 0.3s;
+}
+
+#url-input:focus {
+  border-color: #1a237e;
+  outline: none;
+}
+
+.scan-button {
+  padding: 12px 20px;
+  font-size: 1em;
+  background: linear-gradient(90deg, #1a237e, #3f51b5);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.scan-button:hover {
+  background: linear-gradient(90deg, #3f51b5, #1a237e);
+  transform: scale(1.04);
+}
+
+.result-card {
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 18px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(60,72,88,0.10);
+  border-left: 5px solid #1a237e;
+}
+.result-card.low-risk { border-left-color: #28a745; }
+.result-card.medium-risk { border-left-color: #ffc107; }
+.result-card.high-risk { border-left-color: #dc3545; }
+
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #e0eafc;
+  padding-bottom: 5px;
+  font-size: 0.97em;
+}
+
+.label {
+  font-weight: 600;
+  color: #555;
+}
+.value {
+  color: #1a237e;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.security-meter {
+  margin-top: 18px;
+}
+.risk-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  color: #888;
+  margin-bottom: 4px;
+}
+.progress-track {
+  background-color: #e9ecef;
+  height: 18px;
+  border-radius: 9px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.85em;
+  color: white;
+  transition: width 0.8s ease;
+}
+.low-risk .progress-fill { background-color: #28a745; }
+.medium-risk .progress-fill { background-color: #ffc107; }
+.high-risk .progress-fill { background-color: #dc3545; }
+
+.alert {
+  padding: 0.8rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+  background: #ffeaea;
+  color: #b71c1c;
+  border: 1px solid #ffcdd2;
+  text-align: center;
+}
+
+.threat-details {
+  margin-top: 16px;
+  padding: 1rem;
+  background: #f7fafd;
+  border-radius: 8px;
+  border: 1px solid #e0eafc;
+}
+.threat-details h4 {
+  margin-bottom: 0.7rem;
+  color: #1a237e;
+}
+.threat-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.threat-details li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #e0eafc;
+  font-size: 0.97em;
+}
+.threat-details li:last-child {
+  border-bottom: none;
+}
+.threat-details.clean {
+  text-align: center;
+  color: #28a745;
+  font-weight: 600;
+}
+.timestamp {
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+  color: #888;
+  text-align: right;
+} 
