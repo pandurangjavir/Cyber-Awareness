@@ -1,0 +1,117 @@
+.tools-section {
+  padding: 40px 20px;
+  background: #f5f7fa;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tools-heading {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  max-width: 100vw;
+}
+
+.tool-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(60,72,88,0.10);
+  padding: 28px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: 1px solid #e3e8ee;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tool-card:hover {
+  box-shadow: 0 8px 32px rgba(48,79,254,0.14);
+  transform: translateY(-4px) scale(1.03);
+  border-color: #3949ab;
+}
+
+.tool-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a237e;
+  margin-bottom: 10px;
+}
+
+.tool-content {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.tool-subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3949ab;
+  margin: 16px 0 8px 0;
+}
+
+.tool-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 8px 0;
+}
+
+.tool-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  color: #394867;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.tool-list li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #3949ab;
+  font-weight: bold;
+}
+
+.tool-desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #394867;
+  margin: 8px 0;
+}
+
+.tool-link {
+  margin-top: auto;
+  background: linear-gradient(90deg, #1a237e 60%, #3949ab 100%);
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(60,72,88,0.08);
+}
+
+.tool-link:hover {
+  background: linear-gradient(90deg, #3949ab 60%, #1a237e 100%);
+  color: #fff;
+} 
